@@ -219,7 +219,7 @@ padding-right: 18px;
 
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1300px){
   table caption {
     font-size: 1.3em;
   }
@@ -232,11 +232,10 @@ padding-right: 18px;
   .p8{
     display: none;
   }
-  .p9{
-    display: none;
-  }
-  .p10{
-    display: none;
-  }
-
+.left{
+  width: 60%
+}
+.right{
+  width: 35%
+}
 }
