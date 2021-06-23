@@ -1,0 +1,220 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+  overflow-x: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 1%;
+  width: auto;
+  margin-left: 3%;
+  table-layout: fixed;
+}
+.left{
+  width: 70%;
+}
+.right{
+  width: 27%;
+  float: right;
+
+  margin-right: 3%;
+  padding-left: 2%;
+}
+.caption {
+  font-size: 3em;
+  margin: .5em 0 .75em;
+  text-align: left;
+  padding-left: 3%;
+  margin-top: 10%;
+  color: #3c8dbc;
+}
+
+.icon-row img{
+padding-right: 18px;
+}
+.icon-row{
+  padding-left: 3%;
+}
+.right-end{
+   float: right;
+   color: #3c8dbc;
+}
+.right-end a{
+  background-color: #edeeef;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.right-end span{
+  padding-right:8px;
+}
+
+table th{
+  border-bottom: 3px solid white;
+  color: #3c8dbc;
+  padding-left: 10%;
+}
+
+table tr {
+  background-color: #e6f6fc;
+  padding: .35em;
+  color: #3c8dbc;
+  padding-left: 10%;
+}
+
+table tr:hover{
+  background-color: #e1f2fa;
+
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.active{
+
+}
+.icon img{
+padding-right: 18px;
+}
+.icon{
+  margin-top: 5%;
+}
+
+.task-title{
+  margin-top: 4%;
+  border-bottom: 5px solid #6fba60;
+}
+.task-title h3{
+  color:#3c8dbc;
+  padding-bottom: 10px;
+}
+
+.task-id span{
+  font-weight: bold;
+  font-size: 18px;
+  color: #4f5250;
+}
+
+.task-id{
+  margin-top: 2%;
+}
+.task-desc{
+  margin-top: 3%;
+  color:#3c8dbc;
+  font-size: 18px;
+}
+.dates{
+  margin-top: 2%;
+  font-size: 16px;
+}
+
+.dates p{
+  font-weight: 600;
+  color: #3c8dbc;
+
+}
+.dates p span{
+  float: right;
+  font-weight: lighter;
+  padding-left: 25px;
+  color: #4f5250;
+  word-spacing: 95px;
+}
+
+.tab{
+  margin-top: 5%;
+}
+.tab .tab-pane{
+  margin-bottom: 3%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.tab .tab-pane button{
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  background-color: transparent;
+  font-weight: 500;
+  color: #4f5250;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 3px;
+}
+
+.tab .tab-pane button:focus{
+  border: transparent;
+}
+.tab .tab-pane button:hover{
+  background-color: #edeeef;
+}
+
+.Collaborators{
+  margin-top: 5%;
+}
+
+.Collaborators span{
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c8dbc;
+  padding: 10px;
+
+}
+.Collaborators .box{
+  padding: 30px;
+  color: white
+}
+.task-classification{
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 600px){
+  table caption {
+    font-size: 1.3em;
+  }
+  .p4{
+    display: none;
+  }
+  .p6{
+    display: none;
+  }
+  .p8{
+    display: none;
+  }
+  .p9{
+    display: none;
+  }
+  .p10{
+    display: none;
+  }
+
+}
+@media screen and (max-width: 800px){
+  table caption {
+    font-size: 1.3em;
+  }
+  .p4{
+    display: none;
+  }
+  .p6{
+    display: none;
+  }
+  .p8{
+    display: none;
+  }
+  .p9{
+    display: none;
+  }
+  .p10{
+    display: none;
+  }
+
+}

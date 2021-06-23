@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/c.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+
+  </head>
+  <body>
+    <div class="row">
+    <div class="left">
+    <div class="caption">
+      Task
+    </div>
+    <div class="icon-row">
+      <img src="./icons/plus.png" alt="">
+      <img src="./icons/refresh.png" alt="">
+      <img src="./icons/import.png" alt="">
+      <img src="./icons/export.png" alt="">
+      <img src="./icons/filter.png" alt="">
+      <img src="./icons/trash.png" alt="">
+      <img src="./icons/setting.png" alt="">
+      <div class="right-end">
+        <span>2 of 5</span>
+        <a class="prev" onclick="">❮</a>
+        <a class="next" onclick="">❯</a>
+      </div>
+
+    </div>
+    <table>
+  <thead>
+    <tr id="1" onclick="show()">
+
+      <th class="p1" scope="col"><input type="checkbox" /> SNo.</th>
+      <th class="p2" scope="col" >Task Id</th>
+      <th class="p3" scope="col">Task Title</th>
+      <th class="p4" scope="col">Task Description</th>
+      <th class="p5" scope="col">Task Status</th>
+      <th class="p6" scope="col">Start Date</th>
+      <th class="p7" scope="col">Due Date</th>
+      <th class="p8" scope="col">Next Action Date</th>
+      <th class="p9" scope="col">Assigned to</th>
+      <th class="p10" scope="col">Created by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="2">
+      <td class="p1 row-data" data-label="SNo."><input type="checkbox" />  1</td>
+      <td class="p2 row-data" data-label="Task Id">54082</td>
+      <td class="p3 row-data" data-label="Task Title">Daily Report</td>
+      <td class="p4 row-data" data-label="Task Description">Daily report Description here</td>
+      <td class="p5 row-data" data-label="Task Status">Active</td>
+      <td class="p6 row-data" data-label="Start Date">18/06/2021 17:47PM</td>
+      <td class="p7 row-data" data-label="Due Date">18/06/2021 00:00AM</td>
+      <td class="p8 row-data" data-label="Next Action Date">18/06/2021 00:00AM</td>
+      <td class="p9 row-data" data-label="Assigned to">Deepika</td>
+      <td class="p10 row-data" data-label="Created by">Deepika</td>
+    </tr>
+
+    <tr>
+      <td class="p1 row-data" data-label="SNo."><input type="checkbox" />  2</td>
+      <td class="p2 row-data" data-label="Task Id">54082</td>
+      <td class="p3 row-data" data-label="Task Title">Daily Report</td>
+      <td class="p4 row-data" data-label="Task Description">Daily report Description here</td>
+      <td class="p5 row-data" data-label="Task Status">Active</td>
+      <td class="p6 row-data" data-label="Start Date">18/06/2021 17:47PM</td>
+      <td class="p7 row-data" data-label="Due Date">18/06/2021 00:00AM</td>
+      <td class="p8 row-data" data-label="Next Action Date">18/06/2021 00:00AM</td>
+      <td class="p9 row-data" data-label="Assigned to">Deepika</td>
+      <td class="p10 row-data" data-label="Created by">Deepika</td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+<div class="right">
+<div class="icon">
+  <img src="./icons/remark.png" alt="">
+  <img src="./icons/new-task.png" alt="">
+  <img src="./icons/people.png" alt="">
+  <img src="./icons/edit.png" alt="">
+  <img src="./icons/action-trash.png" alt="">
+</div>
+<div class="task-title">
+  <h3>Daily Report</h3>
+</div>
+<div class="task-id">
+  <span>Task Id - 50802</span>
+  <span style="float:right">Main Task</span>
+</div>
+<div class="task-desc">
+  <p>Red Calls Done, Incoming Calls Received,
+Duties Handover Work Done</p>
+</div>
+<div class="dates">
+  <p>Start Date <span>18-06-2021 17:47<b>PM</b></span></p>
+  <p>Due Date <span>18-06-2021 17:47<b>PM</b></span></p>
+  <p>Next Action Date <span>18-06-2021 17:47<b>PM</b></span></p>
+</div>
+<div class="tab">
+  <div class="tab-pane">
+    <button class="btn button" onclick="openHistory('AH')">Assignment History</button>
+    <button class="btn button" onclick="openHistory('RH')">Remark History</button>
+    <button class="btn button" onclick="openHistory('EH')">Edit History</button>
+</div>
+
+<div id="AH" class="history">
+
+  <p>Lorem ipsum Updated the Report 5 hours ago</p>
+  <p>Lorem ipsum Updated the Report 5 hours ago</p>
+  <p>Lorem ipsum Updated the Report 5 hours ago</p>
+</div>
+
+<div id="RH" class="history" style="display:none">
+
+  <p>Lorem ipsum Updated the Report 5 hours ago</p>
+  <p>Lorem ipsum Updated the Report 5 hours ago</p>
+</div>
+
+<div id="EH" class="history" style="display:none">
+  <p>Lorem ipsum Updated the Report 5 hours ago</p>
+</div>
+
+</div>
+<div class="Collaborators">
+  <img src="./icons/people.png" alt="" width="25px;">
+  <span>Collaborators</span>
+  <div class="box">
+    .
+  </div>
+</div>
+<div class="task-classification">
+  <img src="./icons/tag.png" alt="" width="20px;">
+  <span>Task Classification</span>
+  <div class="box">
+    .
+  </div>
+</div>
+</div>
+</div>
+
+  </body>
+  <!-- <script>
+          function show() {
+              var rowId = event.target.parentNode.parentNode.id;
+
+              var data = document.getElementById(rowId).querySelectorAll(".row-data");
+
+
+              var n = data[0].innerHTML;
+              var a = data[1].innerHTML;
+
+          }
+      </script> -->
+      <script>
+function openHistory(historyType) {
+  var i;
+  var x = document.getElementsByClassName("history");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(historyType).style.display = "block";
+}
+</script>
+
+</html>
