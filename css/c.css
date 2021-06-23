@@ -176,7 +176,7 @@ padding-right: 18px;
   margin-top: 5%;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 500px){
   table caption {
     font-size: 1.3em;
   }
