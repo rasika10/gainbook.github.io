@@ -218,3 +218,25 @@ padding-right: 18px;
   }
 
 }
+
+@media screen and (max-width: 1000px){
+  table caption {
+    font-size: 1.3em;
+  }
+  .p4{
+    display: none;
+  }
+  .p6{
+    display: none;
+  }
+  .p8{
+    display: none;
+  }
+  .p9{
+    display: none;
+  }
+  .p10{
+    display: none;
+  }
+
+}
