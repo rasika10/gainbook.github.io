@@ -7,7 +7,7 @@ body {
 table {
   border-collapse: collapse;
   margin-top: 1%;
-  width: 100%;
+  width: auto;
   margin-left: 3%;
   table-layout: fixed;
 }
@@ -17,7 +17,7 @@ table {
 .right{
   width: 27%;
   float: right;
-
+  background-color: white;
   margin-right: 3%;
   padding-left: 2%;
 }
@@ -43,11 +43,15 @@ padding-right: 18px;
 .right-end a{
   background-color: #edeeef;
   padding: 5px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .right-end span{
   padding-right:8px;
+}
+
+.p0{
+  padding: 10px;
 }
 
 table th{
@@ -131,7 +135,7 @@ padding-right: 18px;
 }
 
 .tab{
-  margin-top: 5%;
+  margin-top: 7%;
 }
 .tab .tab-pane{
   margin-bottom: 3%;
@@ -156,6 +160,10 @@ padding-right: 18px;
 .tab .tab-pane button:hover{
   background-color: #edeeef;
 }
+.tab .history{
+  height: 180px;
+  overflow: scroll;
+}
 
 .Collaborators{
   margin-top: 5%;
@@ -165,7 +173,7 @@ padding-right: 18px;
   font-size: 16px;
   font-weight: 600;
   color: #3c8dbc;
-  padding: 10px;
+  padding: 7px;
 
 }
 .Collaborators .box{
@@ -175,8 +183,58 @@ padding-right: 18px;
 .task-classification{
   margin-top: 5%;
 }
+.task-classification span{
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c8dbc;
+  padding: 7px;
+}
+.boxx .tag-container{
+  background-color:  #e6f6fc;
+  padding: 5px;
+  height: 100px;
+  margin-top: 2%;
+  width: 100%;
+}
 
-@media screen and (max-width: 500px){
+/* .tag-container { */
+  /* max-width: 300px; /* helps wrap the tags in a specific width */ */
+  /* height: 100px; */
+  /* overflow: scroll;
+} */
+
+.dashfolio-tag {
+  cursor:pointer;
+  padding: 10px 15px 15px 15px;
+  display: inline-block;
+  margin-top: 3px; /*incase tags go in next line, will space */
+  color:#fff;
+  padding-right: 20px; /* adds space inside the tags for the 'x' button */
+}
+
+.dashfolio-tag:hover{
+  opacity:0.7;
+}
+
+.dashfolio-tag:after {
+ position:absolute;
+ content:"×";
+ padding:2px 2px;
+ margin-left:2px;
+ font-size:11px;
+}
+
+#add-tag-input {
+  background:transparent;
+  border:0;
+  padding:5px;
+  width:100%;
+  margin-top: auto;
+
+}
+
+
+@media screen and (max-width: 600px){
   table caption {
     font-size: 1.3em;
   }
@@ -218,7 +276,25 @@ padding-right: 18px;
   }
 
 }
+@media screen and (max-width: 1000px){
+  table caption {
+    font-size: 1.3em;
+  }
+  .p4{
+    display: none;
+  }
 
+  .p8{
+    display: none;
+  }
+  .p9{
+    display: none;
+  }
+  .p10{
+    display: none;
+  }
+
+}
 @media screen and (max-width: 1300px){
   table caption {
     font-size: 1.3em;
@@ -226,7 +302,7 @@ padding-right: 18px;
   .p4{
     display: none;
   }
-  .p6{
+  .p10{
     display: none;
   }
   .p8{
@@ -236,6 +312,58 @@ padding-right: 18px;
   width: 60%
 }
 .right{
-  width: 35%
+  width: 35%;
+  float:right;
 }
 }
+
+
+
+/* @media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+  /* content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+} */

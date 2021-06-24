@@ -5,8 +5,16 @@
     <title></title>
     <link rel="stylesheet" href="./css/c.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+   <script src="./js/jquery-ui.min.js"></script>
+   <script src="./js/jquery.min.js"></script>
+
+   <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
   </head>
   <body>
@@ -28,13 +36,12 @@
         <a class="prev" onclick="">❮</a>
         <a class="next" onclick="">❯</a>
       </div>
-
-    </div>
-    <table>
+     </div>
+<table>
   <thead>
     <tr id="1" onclick="show()">
-
-      <th class="p1" scope="col"><input type="checkbox" /> SNo.</th>
+      <th class="p0" scope="col"><input type="checkbox" /></th>
+      <th class="p1" scope="col"> SNo.</th>
       <th class="p2" scope="col" >Task Id</th>
       <th class="p3" scope="col">Task Title</th>
       <th class="p4" scope="col">Task Description</th>
@@ -47,8 +54,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr id="2">
-      <td class="p1 row-data" data-label="SNo."><input type="checkbox" />  1</td>
+    <tr id="2" class="context-menu">
+      <td class="p0" data-label="checkb"><input type="checkbox" /></td>
+      <td class="p1 row-data" data-label="SNo.">  1</td>
       <td class="p2 row-data" data-label="Task Id">54082</td>
       <td class="p3 row-data" data-label="Task Title">Daily Report</td>
       <td class="p4 row-data" data-label="Task Description">Daily report Description here</td>
@@ -61,7 +69,22 @@
     </tr>
 
     <tr>
-      <td class="p1 row-data" data-label="SNo."><input type="checkbox" />  2</td>
+      <td class="p0" data-label="checkb"><input type="checkbox" /></td>
+      <td class="p1 row-data" data-label="SNo.">2</td>
+      <td class="p2 row-data" data-label="Task Id">54082</td>
+      <td class="p3 row-data" data-label="Task Title">Daily Report</td>
+      <td class="p4 row-data" data-label="Task Description">Daily report Description here</td>
+      <td class="p5 row-data" data-label="Task Status">Active</td>
+      <td class="p6 row-data" data-label="Start Date">18/06/2021 17:47PM</td>
+      <td class="p7 row-data" data-label="Due Date">18/06/2021 00:00AM</td>
+      <td class="p8 row-data" data-label="Next Action Date">18/06/2021 00:00AM</td>
+      <td class="p9 row-data" data-label="Assigned to">Deepika</td>
+      <td class="p10 row-data" data-label="Created by">Deepika</td>
+    </tr>
+
+    <tr>
+      <td class="p0" data-label="checkb"><input type="checkbox" /></td>
+      <td class="p1 row-data" data-label="SNo.">3</td>
       <td class="p2 row-data" data-label="Task Id">54082</td>
       <td class="p3 row-data" data-label="Task Title">Daily Report</td>
       <td class="p4 row-data" data-label="Task Description">Daily report Description here</td>
@@ -76,7 +99,6 @@
 
   </tbody>
 </table>
-
 </div>
 <div class="right">
 <div class="icon">
@@ -104,13 +126,14 @@ Duties Handover Work Done</p>
 </div>
 <div class="tab">
   <div class="tab-pane">
-    <button class="btn button" onclick="openHistory('AH')">Assignment History</button>
+    <button class=" active btn button" onclick="openHistory('AH')">Assignment History</button>
     <button class="btn button" onclick="openHistory('RH')">Remark History</button>
     <button class="btn button" onclick="openHistory('EH')">Edit History</button>
 </div>
 
 <div id="AH" class="history">
-
+  <p>Lorem ipsum Updated the Report 5 hours ago</p>
+  <p>Lorem ipsum Updated the Report 5 hours ago</p>
   <p>Lorem ipsum Updated the Report 5 hours ago</p>
   <p>Lorem ipsum Updated the Report 5 hours ago</p>
   <p>Lorem ipsum Updated the Report 5 hours ago</p>
@@ -135,15 +158,55 @@ Duties Handover Work Done</p>
   </div>
 </div>
 <div class="task-classification">
-  <img src="./icons/tag.png" alt="" width="20px;">
-  <span>Task Classification</span>
-  <div class="box">
-    .
-  </div>
-</div>
-</div>
-</div>
 
+    <img src="./icons/tag.png" alt="" width="20px;">
+    <span>Task Classification</span>
+<div class="boxx">
+      <div class="tag-container" id="tag-container">
+
+      </div>
+  </div>
+  <input type="text" value="" placeholder="Add a tag" id="add-tag-input" />
+
+</div>
+</div>
+</div>
+<script>
+function openHistory(historyType) {
+var i;
+var x = document.getElementsByClassName("history");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+}
+document.getElementById(historyType).style.display = "block";
+}
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+$(function(){
+
+$("#add-tag-input").on({
+focusout : function() {
+var txt = this.value.replace(/[^a-z0-9\+\-\.\#]/ig,''); // allowed characters
+if(txt) $("<span/>", {text:txt.toLowerCase(), appendTo:"#tag-container", class:"dashfolio-tag"});
+
+this.value = "";
+},
+keyup : function(ev) {
+// if: comma|enter (delimit more keyCodes with | pipe)
+if(/(188|13)/.test(ev.which)) $(this).focusout();
+}
+});
+$('.tag-container').on('click', 'span', function() {
+$(this).remove();
+// if(confirm("Remove "+ $(this).text() +"?")) $(this).remove();
+});
+});
+});
+
+</script>
   </body>
   <!-- <script>
           function show() {
@@ -157,15 +220,6 @@ Duties Handover Work Done</p>
 
           }
       </script> -->
-      <script>
-function openHistory(historyType) {
-  var i;
-  var x = document.getElementsByClassName("history");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(historyType).style.display = "block";
-}
-</script>
+
 
 </html>
