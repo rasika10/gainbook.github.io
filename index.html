@@ -39,23 +39,25 @@
      </div>
 <table>
   <thead>
-    <tr id="1" onclick="show()">
-      <th class="p0" scope="col"><input type="checkbox" /></th>
-      <th class="p1" scope="col"> SNo.</th>
-      <th class="p2" scope="col" >Task Id</th>
-      <th class="p3" scope="col">Task Title</th>
-      <th class="p4" scope="col">Task Description</th>
-      <th class="p5" scope="col">Task Status</th>
-      <th class="p6" scope="col">Start Date</th>
-      <th class="p7" scope="col">Due Date</th>
-      <th class="p8" scope="col">Next Action Date</th>
-      <th class="p9" scope="col">Assigned to</th>
-      <th class="p10" scope="col">Created by</th>
-    </tr>
+<tr id="1" onclick="show()">
+  <th class="p0" scope="col"><input type="checkbox" id="selectall" class="css-checkbox " name="selectall" /></th>
+  <th class="p1" scope="col"> SNo.</th>
+  <th class="p2" scope="col" >Task Id</th>
+  <th class="p3" scope="col">Task Title</th>
+  <th class="p4" scope="col">Task Description</th>
+  <th class="p5" scope="col">Task Status</th>
+  <th class="p6" scope="col">Start Date</th>
+  <th class="p7" scope="col">Due Date</th>
+  <th class="p8" scope="col">Next Action Date</th>
+  <th class="p9" scope="col">Assigned to</th>
+  <th class="p10" scope="col">Created by</th>
+</tr>
+
+
   </thead>
   <tbody>
     <tr id="2" class="context-menu">
-      <td class="p0" data-label="checkb"><input type="checkbox" /></td>
+      <td class="p0" data-label="checkb"><input type="checkbox" class="checkboxall" value="checkbox1" /></td>
       <td class="p1 row-data" data-label="SNo.">  1</td>
       <td class="p2 row-data" data-label="Task Id">54082</td>
       <td class="p3 row-data" data-label="Task Title">Daily Report</td>
@@ -69,7 +71,7 @@
     </tr>
 
     <tr>
-      <td class="p0" data-label="checkb"><input type="checkbox" /></td>
+      <td class="p0" data-label="checkb"><input type="checkbox" class="checkboxall" value="checkbox2" /></td>
       <td class="p1 row-data" data-label="SNo.">2</td>
       <td class="p2 row-data" data-label="Task Id">54082</td>
       <td class="p3 row-data" data-label="Task Title">Daily Report</td>
@@ -83,7 +85,7 @@
     </tr>
 
     <tr>
-      <td class="p0" data-label="checkb"><input type="checkbox" /></td>
+      <td class="p0" data-label="checkb"><input type="checkbox" class="checkboxall" value="checkbox3" /></td>
       <td class="p1 row-data" data-label="SNo.">3</td>
       <td class="p2 row-data" data-label="Task Id">54082</td>
       <td class="p3 row-data" data-label="Task Title">Daily Report</td>
@@ -206,6 +208,36 @@ $(this).remove();
 });
 });
 
+
+
+$(document).ready(function(){
+  $("tr").click(function(){
+    $(this).addClass("style");
+  });
+
+  $("td").click(function(){
+    $("tr").removeClass("style");
+  });
+
+  $("th").click(function(){
+    $("tr").removeClass("style");
+  });
+});
+
+
+$(document).ready(function(){
+$("#selectall").click(function(){
+        if(this.checked){
+            $('.checkboxall').each(function(){
+                $(".checkboxall").prop('checked', true);
+            })
+        }else{
+            $('.checkboxall').each(function(){
+                $(".checkboxall").prop('checked', false);
+            })
+        }
+    });
+});
 </script>
   </body>
   <!-- <script>
