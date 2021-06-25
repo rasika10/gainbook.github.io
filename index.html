@@ -44,13 +44,13 @@
   <th class="p1" scope="col"> SNo.</th>
   <th class="p2" scope="col" >Task Id</th>
   <th class="p3" scope="col">Task Title</th>
-  <th class="p4" scope="col">Task Description</th>
+  <th class="p4 " scope="col" colspan="2">Task Description</th>
   <th class="p5" scope="col">Task Status</th>
-  <th class="p6" scope="col">Start Date</th>
+  <th class="p6 h" scope="col">Start Date</th>
   <th class="p7" scope="col">Due Date</th>
-  <th class="p8" scope="col">Next Action Date</th>
+  <th class="p8 h" scope="col">Next Action Date</th>
   <th class="p9" scope="col">Assigned to</th>
-  <th class="p10" scope="col">Created by</th>
+  <th class="p10 h" scope="col">Created by</th>
 </tr>
 
 
@@ -61,13 +61,13 @@
       <td class="p1 row-data" data-label="SNo.">  1</td>
       <td class="p2 row-data" data-label="Task Id">54082</td>
       <td class="p3 row-data" data-label="Task Title">Daily Report</td>
-      <td class="p4 row-data" data-label="Task Description">Daily report Description here</td>
+      <td class="p4 row-data" data-label="Task Description" colspan="2">Daily report Description here</td>
       <td class="p5 row-data" data-label="Task Status">Active</td>
-      <td class="p6 row-data" data-label="Start Date">18/06/2021 17:47PM</td>
+      <td class="p6 h row-data" data-label="Start Date">18/06/2021 17:47PM</td>
       <td class="p7 row-data" data-label="Due Date">18/06/2021 00:00AM</td>
-      <td class="p8 row-data" data-label="Next Action Date">18/06/2021 00:00AM</td>
+      <td class="p8 h row-data" data-label="Next Action Date">18/06/2021 00:00AM</td>
       <td class="p9 row-data" data-label="Assigned to">Deepika</td>
-      <td class="p10 row-data" data-label="Created by">Deepika</td>
+      <td class="p10 h row-data" data-label="Created by">Deepika</td>
     </tr>
 
     <tr>
@@ -75,13 +75,13 @@
       <td class="p1 row-data" data-label="SNo.">2</td>
       <td class="p2 row-data" data-label="Task Id">54082</td>
       <td class="p3 row-data" data-label="Task Title">Daily Report</td>
-      <td class="p4 row-data" data-label="Task Description">Daily report Description here</td>
+      <td class="p4 row-data" data-label="Task Description" colspan="2">Daily report Description here</td>
       <td class="p5 row-data" data-label="Task Status">Active</td>
-      <td class="p6 row-data" data-label="Start Date">18/06/2021 17:47PM</td>
+      <td class="p6 h row-data" data-label="Start Date">18/06/2021 17:47PM</td>
       <td class="p7 row-data" data-label="Due Date">18/06/2021 00:00AM</td>
-      <td class="p8 row-data" data-label="Next Action Date">18/06/2021 00:00AM</td>
+      <td class="p8 h row-data" data-label="Next Action Date">18/06/2021 00:00AM</td>
       <td class="p9 row-data" data-label="Assigned to">Deepika</td>
-      <td class="p10 row-data" data-label="Created by">Deepika</td>
+      <td class="p10 h row-data" data-label="Created by">Deepika</td>
     </tr>
 
     <tr>
@@ -89,13 +89,13 @@
       <td class="p1 row-data" data-label="SNo.">3</td>
       <td class="p2 row-data" data-label="Task Id">54082</td>
       <td class="p3 row-data" data-label="Task Title">Daily Report</td>
-      <td class="p4 row-data" data-label="Task Description">Daily report Description here</td>
+      <td class="p4 row-data" data-label="Task Description" colspan="2">Daily report Description here</td>
       <td class="p5 row-data" data-label="Task Status">Active</td>
-      <td class="p6 row-data" data-label="Start Date">18/06/2021 17:47PM</td>
+      <td class="p6 h row-data" data-label="Start Date">18/06/2021 17:47PM</td>
       <td class="p7 row-data" data-label="Due Date">18/06/2021 00:00AM</td>
-      <td class="p8 row-data" data-label="Next Action Date">18/06/2021 00:00AM</td>
-      <td class="p9 row-data" data-label="Assigned to">Deepika</td>
-      <td class="p10 row-data" data-label="Created by">Deepika</td>
+      <td class="p8 h row-data" data-label="Next Action Date">18/06/2021 00:00AM</td>
+      <td class="p9  row-data" data-label="Assigned to">Deepika</td>
+      <td class="p10 h row-data" data-label="Created by">Deepika</td>
     </tr>
 
 
@@ -109,7 +109,9 @@
   <img src="./icons/people.png" alt="">
   <img src="./icons/edit.png" alt="">
   <img src="./icons/action-trash.png" alt="">
+  <!-- <img src="./icons/close.png" alt="" style="float:right;" id="closeButton"> -->
 </div>
+
 <div class="task-title">
   <h3>Daily Report</h3>
 </div>
@@ -211,8 +213,12 @@ $(this).remove();
 
 
 $(document).ready(function(){
+    $(".right").hide();
   $("tr").click(function(){
     $(this).addClass("style");
+    $(".right").show();
+    $(".left").addClass("move");
+    $(".h").hide();
   });
 
   $("td").click(function(){
@@ -238,6 +244,13 @@ $("#selectall").click(function(){
         }
     });
 });
+
+// document.getElementById('closeButton').addEventListener('click', function(e) {
+//     e.preventDefault();
+//     $(".right").remove();
+//     $(".left").css("width", "100%");
+// }, false);
+
 </script>
   </body>
   <!-- <script>
