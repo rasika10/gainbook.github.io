@@ -69,7 +69,6 @@ padding-right: 18px;
 }
 
 
-
 table th{
   border-bottom: 3px solid white;
   color: #3c8dbc;
@@ -126,7 +125,7 @@ padding-right: 18px;
 
 .task-id span{
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   color: #4f5250;
 }
 
@@ -154,6 +153,7 @@ padding-right: 18px;
   padding-left: 25px;
   color: #4f5250;
   word-spacing: 95px;
+  font-size: 13px;
 }
 
 .tab{
@@ -167,12 +167,12 @@ padding-right: 18px;
 .tab .tab-pane button{
   border: none;
   border-radius: 50px;
-  font-size: 15px;
+  font-size: 14px;
   background-color: transparent;
   font-weight: 500;
   color: #4f5250;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
   margin-left: 3px;
 }
 
@@ -186,6 +186,13 @@ padding-right: 18px;
   height: 180px;
   overflow: scroll;
 }
+.tab .history p{
+  font-size: 13px;
+}
+.tab .history p span{
+  font-weight: 500;
+}
+
 
 .Collaborators{
   margin-top: 5%;
