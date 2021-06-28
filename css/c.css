@@ -10,21 +10,37 @@ table {
   width: 100%;
   table-layout: fixed;
 }
+ .hidden_row td:first-child{
+  margin-left: 10%;
+  width: 60%;
+}
+
+
+}
+.hidden_row{
+  margin-left: 5%;
+  width: 50%;
+}
+.hidden_row .checkboxall{
+  margin-right: 10px;
+}
+
 .new{
   border-collapse: collapse;
   margin-top: 1%;
   width: 100%;
   table-layout: fixed;
 }
+
 .left{
   width: 100%;
   padding: 25px;
 }
 .move{
-  width: 70%;
+  width: 65%;
 }
 .right{
-  width: 27%;
+  width: 32%;
   float: right;
   background-color: white;
   margin-right: 3%;
@@ -85,7 +101,14 @@ table tr {
 /* table tr:hover{
   background-color: #e1f2fa;
 } */
+i{
+  font-size: 18px;
+  padding: 15px;
+}
 
+.checkboxall{
+  padding-right: 15px;
+}
 table th,
 table td {
   padding: 10px;
@@ -98,9 +121,54 @@ table th {
   text-transform: uppercase;
 }
 
-.active{
+/* right click */
 
+#contextMenu {
+  position: absolute;
+  display: none;
 }
+
+tr:nth-child(even) {background: #F5F5F5}
+
+tr td{
+  position:relative;
+}
+
+tr:hover{
+  /* background:#c9e8f7; */
+  position:relative;
+}
+
+.dropdown-menu{
+  display:inline-block;
+  position:static;
+}
+.dropdown-menu li {
+  display:inline-block;
+    padding: 0px;
+    margin: 6px 8px;
+}
+.dropdown ul{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dropdown ul{
+     border-top-left-radius: 0px;
+     border-top-right-radius: 12px 12px;
+     border-bottom-right-radius: 12px 12px;
+     border-bottom-left-radius: 12px 12px;
+     border: 1px solid #c9e8f7;
+}
+
+
+
+
+.hidden_row {
+           display: none;
+       }
+
+
 .icon img{
 padding-right: 18px;
 }
@@ -130,15 +198,23 @@ padding-right: 18px;
 }
 
 .task-id{
-  margin-top: 2%;
+  margin-top: 5%;
 }
 .task-desc{
-  margin-top: 3%;
   color:#3c8dbc;
-  font-size: 18px;
+  font-size: 16px;
+  margin-top: 3%;
 }
+.task-desc span{
+  color:#3c8dbc;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom:10px;
+}
+
+
 .dates{
-  margin-top: 2%;
+  margin-top: 5%;
   font-size: 16px;
 }
 
@@ -268,10 +344,8 @@ overflow: hidden;
 }
 
 
-@media screen and (max-width: 600px){
-  table caption {
-    font-size: 1.3em;
-  }
+@media only screen and (max-width: 600px){
+
   .p4{
     display: none;
   }
@@ -287,6 +361,21 @@ overflow: hidden;
   .p10{
     display: none;
   }
+  .left{
+   width: 100%;
+ }
+
+  .right{
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 600px){
+
+  .left{
+   max-width: 100%;
+ }
 
 }
 @media screen and (max-width: 800px){
@@ -308,6 +397,13 @@ overflow: hidden;
   .p10{
     display: none;
   }
+  /* .right{
+    display: none;
+  }
+
+.left{
+  width: 100%;
+} */
 
 }
 @media screen and (max-width: 1000px){
